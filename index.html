@@ -1,0 +1,32 @@
+<!doctype html>
+<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+	<title>Taxi Heatmap</title>
+	<style type="text/css">
+		#mapid { height: 580px; }
+	</style>
+
+</head>
+<body>
+	<div id="mapid"></div>
+	<script type="text/javascript">
+		var mymap = L.map('mapid').setView([31.18, 121.40], 10);
+// 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+//     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+//     maxZoom: 18,
+//     id: 'Shanghai',
+//     accessToken: 'pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ'
+// }).addTo(mymap);
+  L.tileLayer(
+      'https://api.mapbox.com/styles/v1/cherylzuo/cj0tjt8xe00ht2rqpetqhcebv/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ', {
+        id: 'mapbox.streets'
+      }).addTo(mymap);
+
+	</script>
+
+</body>
+<!-- https://api.mapbox.com/styles/v1/cherylzuo/cj0tjt8xe00ht2rqpetqhcebv/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY2hlcnlsenVvIiwiYSI6ImNpeHQzNDBlMjAwMGIycW8xZnoxZXd1ZGIifQ.VJs34ZS05Q2xnJ5y54eZyQ -->
